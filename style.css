@@ -1,0 +1,942 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+
+    --first-color: hsl(219, 69%, 56%);
+    --first-color-alt: hsl(219, 69%, 52%);
+    --title-color: hsl(219, 8%, 95%);
+    --text-color: hsl(219, 8%, 75%);
+    --text-color-light: hsl(219, 4%, 55%);
+    --white-color: #fff;
+    --body-color: hsl(219, 4%, 4%);
+    --container-color: hsl(219, 4%, 7%);
+}
+ body{
+  overflow-x: hidden;
+} 
+html{
+  scroll-behavior:smooth;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  color: #000;
+}
+
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+
+.container{
+    padding: 3% 5%;
+}
+
+
+
+
+
+
+/* slide style */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------home------------- */
+.home{
+  height: 100vh;
+}
+header{
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  border-radius: 0;
+}
+header .container{
+  padding: 1% 5%;
+  border-radius: 0px;
+}
+header.active{
+  border-radius: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: .5s;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(209, 213, 219, 0.3)
+}
+header.active *{
+  color: #000;
+}
+header.active nav{
+  border-bottom: none;
+}
+header nav{
+  padding-block: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.652);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+header nav .social-links,.logo,.nav-list,.menu{
+  flex-basis: 33%;
+}
+header .logo{
+
+
+}
+header .logo .logo-holder{
+  display: flex;
+  justify-content:center;
+  width: 100%;
+  /* padding: 0px 120px; */
+}
+header .logo .logo-holder img{
+  width: 20%;
+  /* padding: 20px; */
+  /* padding-right: 100px;/ */
+  /* width: 30%; */
+}
+/* header nav .social-links,.logo,.nav-list{
+  flex-basis: calc(33%);
+} */
+header .nav-list li{
+}
+header .nav-list a{
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+header .social-links{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+}
+header .nav-list a.active{
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.652);
+  border-radius: 50%;
+}
+header *{
+  color: rgba(255, 255, 255, 0.652);
+}
+
+header .menu{
+  display: none;
+  text-align: center;
+}
+
+
+
+
+
+.slideshow-text .item{
+  color:#fff;
+}
+
+
+@media (max-width:959px) {
+  header .logo .logo-holder img{
+    width: 50%;
+  }
+  header .nav-list{
+transition: .3s;
+    width: 0%;
+    background-color: #080800;
+    flex-direction: column;
+    display: block;
+    position:fixed;
+    right: 0;
+    opacity: 0;
+    top: 60px;
+  }
+  header .nav-list li{
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  header .nav-list li a{
+    width: 100%;
+    display: block;
+  }
+  header .nav-list.active{
+    right: 0;
+    width: 100%; 
+    opacity: 1;
+    top: 60px;
+    padding: 20px;
+    
+  }
+  header .nav-list *{
+    color: #fff;
+  }
+  header .menu{
+   
+    display: block;
+  }
+
+  .slide .main-con{
+    padding: 20px;
+  }
+  .slide .text div{
+    font-size: 1rem;
+    -webkit-text-stroke: .5px white
+    /* display: block; */
+  }
+  .slide .text div:last-of-type{
+
+  }
+  .slide .text div:last-of-type span{
+    font-size: 1rem;
+
+  }
+  .slide .image-holder{
+    top: -20px;
+  }
+  .slide .image-holder img{
+    width: 100%;
+  }
+  .slide .image-holder .spec{
+    width: 80%;
+  }
+  .slide .text div:first-of-type span{
+  }
+}
+
+
+
+
+.slideshow-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  font-size: 80px;
+  width: 100vw;
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 100;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  line-height: 0.8;
+}
+
+
+
+
+.cover{
+  width: 90vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+
+  
+@keyframes mobileappear{
+  0%{
+
+    margin-bottom: -90px;
+  }
+  20%{
+    margin-bottom: 0px;
+    
+  }
+  80%{
+    margin-bottom: 0px;
+
+  }
+  100%{
+    margin-bottom: 0px;
+  }
+}
+
+  
+  .brands {
+    padding-block: 3%; /* Add padding as needed */
+    overflow: hidden;
+}
+.brands .container{
+
+    position: relative;
+}
+.head{
+  text-align: center;
+  padding-block: 1%;
+}
+.head h1{
+  position: relative;
+  font-size: 4rem;
+  color: #000;
+  /* text-align: center; Center align the content */
+}
+.head h1:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    width: 20%;
+    height: 10px;
+    border-radius: 20px;
+    background-color: #000;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.brands .row .col{
+    flex-basis: calc(100% / 2);
+    padding: 20px;
+    height: 300px;
+}
+.brands .row .col .honda,.brands .row .col .suzuki{
+  overflow: visible;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.brands .row .col .honda{
+  background-image: url(./images/eox2lj1z-removebg-preview.png);
+}
+.brands .row .col .suzuki{
+  background-image: url(./images/suzuki.svg);
+}
+.brands .row .col img{
+    width: 100%;
+}
+
+.bacg{
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  width: 100%;
+  z-index: -10;
+
+}
+.bacg .text-holder{
+  text-align: center;
+    font-size: 5rem;
+    white-space: nowrap;
+  }
+  .bacg .text-holder h1{
+  color:#303030;
+
+}
+@media (max-width:767px){
+     .head h1{
+        font-size: 3rem;
+    }
+    .head h1:before{
+        width: 10%;
+    }
+    .brands .row .col{
+        flex-basis: 100%;
+    }
+}
+/* Container Styles */
+.products .container {
+  position: relative;
+}
+
+/* Row Styles */
+.products .row {
+  padding-top: 3%;
+  display: flex; /* Change to flex to make columns have equal height */
+  flex-wrap: wrap;
+  justify-content:stretch;
+}
+
+/* Column Styles */
+.products .col {
+  flex-basis: calc(100% / 4);
+  padding: 20px; /* Increase padding for better spacing */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease; /* Add a hover transition effect */
+  background-color: #fff; /* Set a background color */
+  height: 400px;
+}
+
+.products .col:hover {
+  transform: translateY(-5px); /* Add a slight lift effect on hover */
+}
+@media (max-width:959px){
+  
+  .products .col{
+    height: 350px;
+    flex-basis: calc(100% / 3);
+  }
+}
+@media (max-width:767px){
+  .products .row{
+    padding-top: 5%;
+    justify-content: space-between;
+  }
+  .products .col{
+    flex-basis: calc(100% / 2);
+  }
+}
+/* Name Styles */
+.products .col .name {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 1.2rem; /* Increase font size */
+}
+
+/* Image Styles */
+.products .col .image-holder {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products .col .image-holder .image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease; /* Add a hover transition effect */
+}
+
+.products .col:hover .image-holder .image {
+  transform: scale(1.05); /* Slightly zoom in image on hover */
+}
+.products .col .image{
+  background-size: contain;
+    background-position: center center;
+    background-image: url(./images/products/1.webp);
+    height: 40%;
+    background-repeat: no-repeat;
+}
+
+/* Description Styles */
+.products .col .description {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.products .col .description h4 {
+  margin-top: 10px;
+  font-size: 1rem; /* Adjust font size */
+}
+
+/* Additional Styles */
+.products .price{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.products .price h3{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:green;
+}
+.about .container{
+  background-image: linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),url(./images/3.webp);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  height: 50vh;
+}
+.about .row{
+  
+}
+
+.about .about-us{
+  width: 60%;
+
+  border-radius: 20px;
+}
+.about .about-us .text{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.about .about-us .content p{
+  font-size: 1.1rem;
+}
+.about .about-us .text .title{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.about .about-us .buttons{
+  text-align: center;
+  margin-top: 30px;
+}
+.about .buttons button{
+  margin-inline:10px;
+  background-color: #000;
+  padding: 10px;
+  border: 0;
+  
+}
+.about .buttons button a,i{
+  color:#fff;
+  margin-inline: 5px;
+}
+@media (min-width:768px) and (max-width:959px){
+  .about .about-us{
+    width: 60%;
+    transform: scale(1.2);
+  }
+}
+@media (max-width:767px){
+  .about .container{
+    padding: 20px;
+    height: 60vh;
+  }
+  .about .about-us{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+.about,.brands{
+  margin-block: 10%;
+}
+
+
+
+footer{
+  margin-top: 4%;
+  background-image: url(./images/footer.webp);
+  background-position:center;
+  background-size:cover;
+  background-attachment: fixed;
+  
+}
+footer .col:first-of-type{
+  width: 100%;
+}
+footer .col:first-of-type .image-holder{
+  margin: auto;
+  width: 45%;
+  margin-bottom: 20px;
+}
+footer .image-holder img{
+  width: 100%;
+}
+footer .row{
+  backdrop-filter: blur(16px) saturate(17%);
+  -webkit-backdrop-filter: blur(16px) saturate(17%);
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  border-radius: 0px;
+}
+
+footer .row .col{
+  flex-basis: calc(100% / 3);
+  padding: 20px;
+}
+footer .row{
+  border-bottom: 1px solid #888;
+}
+footer *{
+  color: #fff;
+}
+
+footer .col ul li{
+  margin-block: 10px;
+}
+footer  a{
+  transition: .5s;
+}
+footer .col.cat h3{
+  color:#fff;
+}
+footer .copy a{
+  text-decoration: underline;
+}
+footer a:hover{
+  transition: .5s;
+  color: #fff;
+}
+
+footer hr{
+  color: #888;
+}
+@media(max-width:767px){
+  footer .row .col{
+    flex-basis: 100%;
+  }
+}
+.slick-dots button{
+  background-color: transparent;
+  border: none;
+  color: transparent;
+}
+
+
+
+
+body,
+html {
+
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+
+}
+*{
+  
+}
+.slideshow {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slideshow .slider {
+  position: relative;
+  width: 100vw;
+  height: 100vw;
+  z-index: 2;
+}
+
+.slideshow .slider * {
+  outline: none;
+}
+
+.slideshow .slider .item {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.slideshow .slider .item .text {
+  display: none;
+}
+
+.slideshow .slider .item img {
+  min-width: 101%;
+  min-height: 101%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slideshow .slick-dots {
+  position: absolute;
+  z-index: 100;
+  width: 40px;
+  height: 100vh;
+  right: 5px;
+  left: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: -15px;
+}
+
+.slideshow .slick-dots li {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slideshow .slick-dots li button {
+  position: relative;
+  width: 20px;
+  height: 15px;
+  text-align: center;
+}
+
+.slideshow .slick-dots li button:before {
+  content: '';
+  background: #fff;
+  color: #fff;
+  height: 2px;
+  width: 20px;
+  border-radius: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: auto;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.6;
+}
+
+.slideshow .slick-dots li.slick-active button:before {
+  width: 40px;
+  opacity: 1;
+}
+
+.slideshow.slideshow-right {
+  left: 0;
+  z-index: 1;
+  width: 50vw;
+  pointer-events: none;
+}
+
+.slideshow.slideshow-right .slider {
+  left: 0;
+  position: absolute;
+}
+
+.slideshow-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  font-size: 80px;
+  width: 100vw;
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 100;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  line-height: 0.8;
+}
+
+@media (max-width: 767px) {
+  .slideshow-text {
+    font-size: 40px;
+  }
+}
+
+.the-most {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 50vw;
+  max-width: 200px;
+  padding: 10px;
+}
+
+.the-most img {
+  pointer-events: none;
+}
+.slider .item{
+}
+.item.we{
+  letter-spacing: 7px;
+}
+
+.slideshow .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures that the image covers the entire slide */
+}
+/* By setting a fixed height for the .item elements within your slider and using object-fit: cover; for the images, you can make all the slides look the same in terms of height, and the images will be scaled to cover the entire slide.
+
+Make sure to adjust the height value in the CSS code above to match the desired height for your slides. This should help ensure that all slides have a consistent appearance. */
+
+
+
+
+.slideshow{
+  height: 100vh;
+}
+
+.cover{
+  width: 80w;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+@media (max-width: 767px) {
+  .slideshow .item.spex{
+    font-size: 10px !important;
+  }
+  .slideshow-text {
+    letter-spacing: 10px;
+    font-size: 16px; /* Adjust the font size for better readability on mobile devices */
+    text-align: center; /* Center-align the text on mobile devices */
+    white-space: nowrap;
+
+  }
+  /* .slideshow .slick-dots{
+    position: absolute;
+    top: 85%;
+  } */
+  .slideshow {
+    width: 100%; /* Make the slideshow full width for mobile devices */
+    height: 100vh; /* Adjust the height for mobile devices */
+  }
+
+  .slider .item img {
+    min-width: 100%; /* Ensure images cover the entire width for mobile devices */
+    min-height: auto; /* Allow images to adjust their height for mobile devices */
+  }
+}
+
+
+
+
+
+
+/* ----------for tablets---------- */
+
+@media(min-width:768px) and(max-width:959px){
+  .slideshow .item.spex{
+    font-size: 14px !important;
+  }
+  .slideshow-text {
+    letter-spacing: 10px;
+    font-size: 20px; /* Adjust the font size for better readability on mobile devices */
+    text-align: center; /* Center-align the text on mobile devices */
+    white-space: nowrap;
+
+  }
+}
+
+
+
+
+
+/* Rest of your existing CSS code */
+/* ... */
+/* In this updated code:
+
+I reduced the font size to 20px for better readability on mobile devices.
+
+I centered the text both horizontally and vertically using CSS properties like text-align, position, and transform.
+
+I made sure the images still cover the entire width while allowing their height to adjust for mobile devices.
+
+Please test this updated CSS code on mobile devices and adjust the font size and other styles as needed to achieve the desired appearance on various mobile screens.
+
+ */
+
+
+
+
+
+/* Add media query for tablets (e.g., iPad Air) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .slideshow-text {
+    font-size: 50px; /* Adjust the font size for tablets */
+  }
+
+  .slideshow {
+    width: 100%;
+    /* max-width: 800px; */
+    height: 100vh;
+  }
+
+  .slider .item img {
+    min-width: 100%;
+    min-height: auto;
+  }
+}
+.services .service{
+  padding-block: 100px;
+  position: relative;
+  color: #000;
+}
+.services .service .logo-test{  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 20%;
+  z-index: -1000;
+}
+.services .service .logo-test img{
+ width: 100%;
+ z-index: -1000;
+}
+.services .service .logo-test{
+
+}
+
+.services .service .service-box{
+  padding: 20px;
+  width: 200px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-block:10px;
+  border-radius: 10px;
+  z-index: 1000;
+  animation: up-down 3s infinite alternate ease-in-out;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+}
+.services .service .service-holder{
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
+}
+@keyframes up-down{
+  0%{
+    margin-top: 20px;
+  }
+  100%{
+    margin-top: -20px;
+  }
+}
+.services .service .service-box h4{
+  padding: 5px;
+}
+.services .service .service-box i{
+  font-size: 1.5rem;
+  color:#000;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+  <title>aqua jet watersport</title>
+  <link rel="icon" href="./images/PNG/Logo1.png">
+    <link rel="stylesheet" href="slide.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="home" id="home">
+
+        <header>
+            <div class="container">
+                
+                <nav>
+                    <div class="social-links">
+                        <div class="link">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="link">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <img src="./images/PNG/Logo1.png" alt="">
+                    </div>
+                   
+
+                    <div class="menu-holder">
+                        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'));document.querySelector('header .nav-list').classList.toggle('active')" aria-label="Main Menu" >
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                            <path class="line line2" d="M 20,50 H 80" />
+                            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+    
+                
+    
+        <div class="landing" id="landing">
+            <div class="text">
+                <h3>it's time to have fun</h3>
+            </div>
+            <div class="image-ilst">
+                <div class="ilst" id="jet"><h5>Jetski</h5></div>
+                <div class="ilst" id="banana"><h5>Banana boat</h5></div>
+                <div class="ilst" id="donut"><h5>Donut boat</h5></div>
+                <div class="ilst" id="kayak"><h5>kayaking</h5></div>
+                <div class="ilst" id="miniboat"><h5>miniboat</h5></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+        <div class="cover">
+        </div>
+    </div>
+
+   
+
+    <div class="activity" id="activities">
+        <div class="container">
+            <div class="head">
+                <h2>Explore Our</h>
+                <h1>Activities<span class="dot">.</span></h1>
+            </div>
+            
+
+
+
+
+            <div class="swiper-container mySwiper" >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/activity/kayak.webp"  alt="kayak riding">
+                        <div class="slide-text">
+                            <h3>Kayak riding</h3>
+                            <h3>price : 50aed - 60min</h3>
+                            <div class="buttons">
+                                <button><a href="tel=:0559923784">Book activity</a></button>
+                                <button class="explore" id="kayakbtn">Explore more</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="../2/images/boat.jpeg"  alt="kayak riding">
+                        <div class="slide-text">
+                            <h3>miniboat riding</h3>
+                            <h3>price : 300aed - one ride</h3>
+                            <div class="buttons">
+                                <button><a href="tel=:0559923784">Book activity</a></button>
+                                <button class="explore" id="miniboatbtn">Explore more</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="./images/activity/donut.webp"  alt="donut riding">
+                        <div class="slide-text">
+                            <h3>Donut riding</h3>
+                            <h3>price : 300aed - 30min</h3>
+                            <div class="buttons">
+                                <button><a href="tel=:0559923784">Book activity</a></button>
+                                <button class="explore" id="donutbtn">Explore more</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="./images/activity/banana.webp"  alt="banana riding">
+                          <div class="slide-text">
+                              <h3>Banana riding</h3>
+                              <h3>price : 300aed - 30min</h3>
+                              <div class="buttons">
+                                  <button><a href="tel=:0559923784">Book activity</a></button>
+                                  <button class="explore" id="bananabtn">Explore more</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="swiper-slide">
+                    <img src="./images/activity/jetski.webp" alt="jetski riding"/>
+                    <div class="slide-text">
+                        <h3>Jetski riding</h3>
+
+                        <h3>price : 150aed - 30min</h3>
+                        <div class="buttons">
+                            <button><a href="tel=:0559923784">Book activity</a></button>
+                            <button class="explore" id="jetskibtn">Explore more</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+
+
+<div class="slide" id="slide"></div>
+    
+
+
+
+
+    <div class="about-us" id="about">
+        <div class="container">
+            <div class="head">
+                <h2>Know more</h>
+                    <h1>About us<span class="dot">.</span></h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="heading">
+                        <h1>Frequently asked <br> questions</h1>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="accordition">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                            <h2>is it safe for my son to ride jetski</h2>
+                            <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                            <div class="accordion-body">
+                                <p><span>yes</span>, Your son will be safe because we provide the best safety standards for young and old and with the eyes of our employees the quality of safety rises</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordition">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                            <h2 class="long">i can't swim is it possible to try your watersports activities</h2>
+                            <i class="fa-solid fa-angle-up"></i>
+                            </button>
+                            <div class="accordion-body">
+                                <p><span>of course yes</span>,</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="responsive-footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h2>About Us</h2>
+            <p>we always make anything perfect</p>
+          </div>
+          <div class="footer-section">
+            <h2>Explore</h2>
+            <ul class="footer-list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#activities">Activities</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h2>Contact us through :</h2>
+            <div class="social-links">
+                <div class="link">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    
+                </div>
+                <div class="link">
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+                <div class="link">
+                    <a href="tel:050964402"><i class="fa-solid fa-phone"></i></a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 <a href="#" id="sp">aqua jet watersport</a>. All rights reserved.</p>
+        </div>
+      </footer>
+      
+
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+              rotate: 40,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+            //   slideShadows: true,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+            },
+            loop:true
+          });
+        </script>
+    <script src="./main.js"></script>
+</body>
+</html>
