@@ -1,108 +1,107 @@
 
+let heroImage = document.querySelector(".hero-image");
+let showMenu = false;
+let del = 3;
+let i = 1;
 
+let tl = gsap.timeline({
+  repeat: -1,
+  yoyo: true,
+  ease: "expo.out"
+});
 
+// overlay.style.display = "none";
 
+// burger.addEventListener("click", (e) => {
+//   showMenu = !showMenu;
+//   if (showMenu) {
+//     burger.classList.add("active");
+//     overlay.style.display = "block";
+//     gsap.to(overlay, 1, {
+//       clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+//       ease: "expo.in"
+//     });
+//   } else {
+//     burger.classList.remove("active");
+//     gsap.to(overlay, 1, {
+//       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+//       ease: "expo.out",
+//       onComplete: () => (overlay.style.display = "none")
+//     });
+//   }
+// });
 
+gsap.set(["#hero-1 h2, #hero-1 h1, #hero-1 h3"], {
+  clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+});
 
+gsap.set(
+  [
+    `#hero-2 h2, #hero-3 h2, #hero-4 h2, #hero-5 h2,
+     #hero-2 h1, #hero-3 h1, #hero-4 h1, #hero-5 h1,
+     #hero-2 h3, #hero-3 h3, #hero-4 h3, #hero-5 h3`
+  ],
+  {
+    clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+  }
+);
 
-let jetski = document.getElementById("jet");
-let banana = document.getElementById("banana");
-let donut = document.getElementById("donut");
-let kayak = document.getElementById("kayak");
-let boat = document.getElementById("miniboat")
-let landing = document.getElementById("landing");
-let ilst = document.querySelectorAll(".ilst");
-let images = ["./images/jetski.webp", "./images/banana.webp", "./images/donut.webp", "./images/kayak.webp","./images/boat.jpeg"];
+while (i < 5) {
+  tl.to(`#hero-${i} h2`, 0.9, {
+    clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+    delay: del
+  })
+    .to(
+      `#hero-${i} h1`,
+      0.9,
+      {
+        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+      },
+      "-=0.3"
+    )
+    .to(
+      `#hero-${i} h3`,
+      0.9,
+      {
+        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+      },
+      "-=0.3"
+    )
+    .to(
+      `#hero-${i} .hi-${i}`,
+      0.7,
+      {
+        clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
+      },
+      "-=1"
+    )
+    .to(`#hero-${i + 1} h2`, 0.9, {
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+    })
+    .to(
+      `#hero-${i + 1} h1`,
+      0.9,
+      {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+      },
+      "-=0.3"
+    )
+    .to(
+      `#hero-${i + 1} h3`,
+      0.9,
+      {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+      },
+      "-=0.3"
+    );
 
-
-let counter = 0;
-let autoToggleInterval;
-
-function toggleImage() {
-    landing.style.backgroundImage = `url('${images[counter]}')`;
-    ilst.forEach((ils) => {
-        ils.classList.remove("active");
-    });
-    ilst[counter].classList.add("active");
-    counter++;
-
-    if (counter === images.length) {
-        counter = 0;
-    }
+  i++;
 }
 
 
-function startAutoToggle() {
-    autoToggleInterval = setInterval(toggleImage, 3000);
-}
 
-// Start the automatic image toggling
-startAutoToggle();
 
-jetski.onclick = () => {
-    ilst.forEach((ils) => {
-        ils.classList.remove("active");
-    });
-    counter = 0
-    landing.style.backgroundImage = `url('${images[counter]}')`;
-    ilst[counter].classList.add("active");
-    
-    // Reset the automatic image toggling after 3 seconds
-    clearInterval(autoToggleInterval);
-    setTimeout(startAutoToggle, 0);
-};
-donut.onclick = () => {
-    ilst.forEach((ils) => {
-        ils.classList.remove("active");
-    });
 
-    counter = 2
-    landing.style.backgroundImage = `url('${images[counter]}')`;
-    ilst[counter].classList.add("active");
-    
-    // Reset the automatic image toggling after 3 seconds
-    clearInterval(autoToggleInterval);
-    setTimeout(startAutoToggle, 0);
-};
-banana.onclick = () => {
-    ilst.forEach((ils) => {
-        ils.classList.remove("active");
-    });
-
-    counter = 1
-    landing.style.backgroundImage = `url('${images[counter]}')`;
-ilst[counter].classList.add("active");
-    // Reset the automatic image toggling after 3 seconds
-    
-    clearInterval(autoToggleInterval);
-    setTimeout(startAutoToggle, 3000);
-};
-kayak.onclick = () => {
-
-    ilst.forEach((ils) => {
-        ils.classList.remove("active");
-    });
-    counter = 3
-    landing.style.backgroundImage = `url('${images[counter]}')`;
-    ilst[counter].classList.add("active");
-    
-    // Reset the automatic image toggling after 3 seconds
-    clearInterval(autoToggleInterval);
-    setTimeout(startAutoToggle, 3000);
-};
-
-boat.onclick =()=>{
-    ilst.forEach((ils) => {
-        ils.classList.remove("active");
-    });
-    counter = 4
-    landing.style.backgroundImage = `url('${images[counter]}')`;
-    ilst[counter].classList.add("active");
-    
-    // Reset the automatic image toggling after 3 seconds
-    clearInterval(autoToggleInterval);
-    setTimeout(startAutoToggle, 3000);
-}
 
 
 const acc_btns = document.querySelectorAll(".accordion-header");
@@ -142,7 +141,7 @@ let explore = document.getElementsByClassName("explore")
 let kayakbtn = document.getElementById("kayakbtn");
 
 kayakbtn.onclick = ()=>{
-    slide.style.backgroundImage = `url("./images/kayak.webp")`
+    slide.style.backgroundImage = `url(${kayakbtn.parentElement.parentElement.parentElement.querySelector("img").src})`
     //slide.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(${kayakbtn.parentElement.parentElement.parentElement.querySelector("img").src})`
     slide.classList.add("active")
     slide.innerHTML = `
@@ -268,7 +267,6 @@ jetskibtn.onclick = ()=>{
 
 
 
-
 document.body.onclick = (e) =>{
     
     if(e.target.parentElement ==  slide){
@@ -287,6 +285,12 @@ document.body.onclick = (e) =>{
     if(e.target.parentElement.parentElement.parentElement == slide){
         slide.classList.remove("active")
     }
+    if(e.target.parentElement != document.querySelector(".menu")){
+      document.querySelector("header .nav-list").classList.remove("active")
+      document.querySelector(".menu").classList.remove("opened")
+      console.log(true)
+    }
+    console.log(e.target.parentElement)
     // if(e.target !=  donutBtn){
     //     slide.classList.remove("active")
     // }
