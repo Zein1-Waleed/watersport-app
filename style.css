@@ -7,7 +7,9 @@
   list-style-type: none;
   text-decoration: none;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", sans-serif;
   width: 100vw;
@@ -59,7 +61,7 @@ nav .nav-list{
 .menu-holder{
   display: none;
 }
-nav .nav-list a{
+nav a{
   color: #fff;
 }
 
@@ -232,7 +234,7 @@ article {
 }
 
 .hi-1 {
-  background-image: url(".//images/jetski.webp");
+  background-image: url("./images/jetski.webp");
 }
 
 /* Photo by Lucas Favre
@@ -260,8 +262,13 @@ article {
    https://unsplash.com/photos/d0ohwP3BRf4
 ----------------------------------------------- */
 .hi-5 {
-  background-image: url("./images/boat.jpeg");
+  background-image: url("./images/boat.webp");
 }
+
+.hi-6 {
+  background-image: url("./images/boat2.jpg");
+}
+
 
 /*  SECTION: Overlay Menu Section
 ----------------------------------------------- */
@@ -490,8 +497,13 @@ padding: 10px;
   width: 100%;
 }
 
-
-
+.spec-swiper .slide-text h3:first-of-type{
+  color:#000;
+}
+.spec-swiper .slide-text h3 {
+  padding-block: 15px;
+  color: #888;
+}
 
 
 .about-us{
@@ -712,7 +724,9 @@ font-size: 1.2rem;
 }
 
 
-
+.activity-name.spec-name{
+  font-size: 2.7rem;
+}
 
 @media (max-width:767px){
 .slide .slide-text{

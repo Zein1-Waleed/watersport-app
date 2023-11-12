@@ -10,26 +10,7 @@ let tl = gsap.timeline({
   ease: "expo.out"
 });
 
-// overlay.style.display = "none";
 
-// burger.addEventListener("click", (e) => {
-//   showMenu = !showMenu;
-//   if (showMenu) {
-//     burger.classList.add("active");
-//     overlay.style.display = "block";
-//     gsap.to(overlay, 1, {
-//       clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
-//       ease: "expo.in"
-//     });
-//   } else {
-//     burger.classList.remove("active");
-//     gsap.to(overlay, 1, {
-//       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-//       ease: "expo.out",
-//       onComplete: () => (overlay.style.display = "none")
-//     });
-//   }
-// });
 
 gsap.set(["#hero-1 h2, #hero-1 h1, #hero-1 h3"], {
   clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
@@ -37,16 +18,16 @@ gsap.set(["#hero-1 h2, #hero-1 h1, #hero-1 h3"], {
 
 gsap.set(
   [
-    `#hero-2 h2, #hero-3 h2, #hero-4 h2, #hero-5 h2,
-     #hero-2 h1, #hero-3 h1, #hero-4 h1, #hero-5 h1,
-     #hero-2 h3, #hero-3 h3, #hero-4 h3, #hero-5 h3`
+    `#hero-2 h2, #hero-3 h2, #hero-4 h2, #hero-5 h2,#hero-6 h2,
+     #hero-2 h1, #hero-3 h1, #hero-4 h1, #hero-5 h1 #hero-6 h1,
+     #hero-2 h3, #hero-3 h3, #hero-4 h3, #hero-5 h3,#hero-6 h3`
   ],
   {
     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)"
   }
 );
 
-while (i < 5) {
+while (i < 6) {
   tl.to(`#hero-${i} h2`, 0.9, {
     clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
     delay: del
@@ -265,7 +246,23 @@ jetskibtn.onclick = ()=>{
     `
 }
 
+let boatbtn = document.getElementById("boatbtn")
 
+boatbtn.onclick = ()=>{
+  slide.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(${boatbtn.parentElement.parentElement.parentElement.querySelector("img").src})`
+    slide.classList.add("active")
+    slide.innerHTML = `
+            <div class = "slide-text">
+                <div class = "activity-name spec-name">
+                    <h3>${boatbtn.parentElement.parentElement.parentElement.getElementsByTagName("h3")[0].textContent} </h3>
+                    <div class = "info"><h4>for 1 hour - 700 aed for 2 hours - 1000 aed</h4></div>
+                </div>
+                <div class = "activity-desc">
+                    <p>mini yacht takes for 8 person and there is in toilet and it passes through the tourism places in Al marjan island ras al khaimah and ready for any events</p>
+                </div>
+            </div>
+    `
+}
 
 document.body.onclick = (e) =>{
     

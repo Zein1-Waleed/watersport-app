@@ -1,0 +1,117 @@
+<main>
+      <article id="hero-1" style="--i: 6">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>jetski</h1>
+        </div>
+        <div class="hero-image hi-1"></div>
+      </article>
+
+      <article id="hero-2" style="--i: 5">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>Donut boat</h1>
+        </div>
+        <div class="hero-image hi-2"></div>
+
+      </article>
+
+      <article id="hero-3" style="--i: 4">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>banana boat</h1>
+        </div>
+        <div class="hero-image hi-3"></div>
+
+      </article>
+
+      <article id="hero-4" style="--i: 3">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>kayak</h1>
+        </div>
+        <div class="hero-image hi-4"></div>
+
+      </article>
+
+      <article id="hero-5" style="--i: 2">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>kayak</h1>
+        </div>
+        <div class="hero-image hi-5"></div>
+      </article>
+      <article id="hero-6" style="--i: 1">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>meee</h1>
+        </div>
+        <div class="hero-image hi-6"></div>
+      </article>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+    original 
+
+
+
+
+
+
+
+
+
+
+    <main>
+      <article id="hero-1" style="--i: 5">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>jetski</h1>
+        </div>
+        <div class="hero-image hi-1"></div>
+      </article>
+
+      <article id="hero-2" style="--i: 4">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>Donut boat</h1>
+        </div>
+        <div class="hero-image hi-2"></div>
+
+      </article>
+
+      <article id="hero-3" style="--i: 3">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>banana boat</h1>
+        </div>
+        <div class="hero-image hi-3"></div>
+
+      </article>
+
+      <article id="hero-4" style="--i: 2">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>kayak</h1>
+        </div>
+        <div class="hero-image hi-4"></div>
+
+      </article>
+
+      <article id="hero-5" style="--i: 1">
+        <div class="hero-info">
+          <h2>Have fun with</h2>
+          <h1>kayak</h1>
+        </div>
+        <div class="hero-image hi-5"></div>
+      </article>
+    </main>
